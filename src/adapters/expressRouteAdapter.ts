@@ -6,6 +6,7 @@ export const expressRouteAdapter = (controller: Controller) => {
     const httpRequest = {
       body: req.body,
     };
+    
     const httpResponse = await controller.handle(httpRequest);
 
     if (httpResponse.statusCode >= 200 && httpResponse.statusCode < 299) {
